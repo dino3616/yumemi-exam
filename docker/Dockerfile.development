@@ -1,0 +1,24 @@
+ARG NODE_VERSION=18
+
+FROM node:${NODE_VERSION}-bullseye
+
+# hadolint ignore=DL3008
+RUN apt-get update \
+    && apt-get --no-install-recommends -y install gnupg2 ca-certificates \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists \
+    && yarn global add pnpm
+
+WORKDIR /workspaces/yumemi-exam/
+
+COPY ./.git ./.git
+COPY ./package.json ./pnpm-lock.yaml ./pnpm-workspace.yaml /workspaces/yumemi-exam/
+COPY ./apps/frontend/package.json /workspaces/yumemi-exam/apps/frontend/package.json
+COPY ./packages/eslint/package.json /workspaces/yumemi-exam/packages/eslint/package.json
+COPY ./packages/eslint/eslint-config-yumemi-exam-base/package.json /workspaces/yumemi-exam/packages/eslint/eslint-config-yumemi-exam-base/package.json
+COPY ./packages/eslint/eslint-config-yumemi-exam-nextjs/package.json /workspaces/yumemi-exam/packages/eslint/eslint-config-yumemi-exam-nextjs/package.json
+COPY ./packages/jest/package.json /workspaces/yumemi-exam/packages/jest/package.json
+COPY ./packages/prettier/package.json /workspaces/yumemi-exam/packages/prettier/package.json
+COPY ./packages/stylelint/package.json /workspaces/yumemi-exam/packages/stylelint/package.json
+COPY ./packages/tsconfig/package.json /workspaces/yumemi-exam/packages/tsconfig/package.json
+RUN pnpm install --frozen-lockfile

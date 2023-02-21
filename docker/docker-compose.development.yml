@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  app:
+    image: ghcr.io/dino3616/yumemi-exam:latest
+    container_name: app
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.development
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces/yumemi-exam/
+      - type: volume
+        source: pnpm-store
+        target: /workspaces/yumemi-exam/.pnpm-store
+    tty: true
+
+volumes:
+  mongo-db:
+    driver: local
+  mongo-configdb:
+    driver: local
+  pnpm-store:
+    driver: local

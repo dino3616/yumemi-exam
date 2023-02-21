@@ -179,6 +179,12 @@ importers:
     devDependencies:
       eslint-config-yumemi-exam-base: link:../eslint-config-yumemi-exam-base
 
+  packages/eslint/eslint-config-yumemi-exam-node:
+    specifiers:
+      eslint-config-yumemi-exam-base: workspace:*
+    devDependencies:
+      eslint-config-yumemi-exam-base: link:../eslint-config-yumemi-exam-base
+
   packages/jest:
     specifiers:
       '@yumemi-exam/prettier': workspace:*

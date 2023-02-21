@@ -11,7 +11,7 @@ const App: FC<AppProps> = ({ Component, pageProps, router }) => (
   <RecoilRoot>
     <GlobalHook />
     <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
-    <div key={router.asPath} className={`${fontFamily} flex min-h-screen flex-col font-sans`}>
+      <div key={router.asPath} className={`${fontFamily} flex min-h-screen flex-col font-sans`}>
         <Component {...pageProps} />
       </div>
     </AnimatePresence>

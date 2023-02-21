@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "manaslu": {
+      "schema": ["./apps/client/graphql.schema.json"]
+    }
+  }
+}

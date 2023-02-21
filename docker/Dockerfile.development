@@ -17,6 +17,7 @@ COPY ./apps/frontend/package.json /workspaces/yumemi-exam/apps/frontend/package.
 COPY ./packages/eslint/package.json /workspaces/yumemi-exam/packages/eslint/package.json
 COPY ./packages/eslint/eslint-config-yumemi-exam-base/package.json /workspaces/yumemi-exam/packages/eslint/eslint-config-yumemi-exam-base/package.json
 COPY ./packages/eslint/eslint-config-yumemi-exam-nextjs/package.json /workspaces/yumemi-exam/packages/eslint/eslint-config-yumemi-exam-nextjs/package.json
+COPY ./packages/eslint/eslint-config-yumemi-exam-node/package.json /workspaces/yumemi-exam/packages/eslint/eslint-config-yumemi-exam-node/package.json
 COPY ./packages/jest/package.json /workspaces/yumemi-exam/packages/jest/package.json
 COPY ./packages/prettier/package.json /workspaces/yumemi-exam/packages/prettier/package.json
 COPY ./packages/stylelint/package.json /workspaces/yumemi-exam/packages/stylelint/package.json

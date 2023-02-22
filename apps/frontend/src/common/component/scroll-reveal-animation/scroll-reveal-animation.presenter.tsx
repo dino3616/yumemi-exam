@@ -10,6 +10,7 @@ export type ScrollRevealAnimationProps = ComponentPropsWithoutRef<typeof motion.
 
 export const ScrollRevealAnimation: FC<ScrollRevealAnimationProps> = ({ once, duration, delay, distance, children, ...props }) => (
   <motion.div
+    data-chromatic="ignore"
     variants={{
       offscreen: {
         y: distance,

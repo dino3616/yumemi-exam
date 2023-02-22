@@ -145,7 +145,7 @@
   ],
   "eslint.format.enable": true,
   "eslint.packageManager": "pnpm",
-  "eslint.workingDirectories": ["apps/frontend/"],
+  "eslint.workingDirectories": ["apps/frontend/", "packages/resas-api"],
   "jest.rootPath": "/workspaces/yumemi-exam/",
   "jest.jestCommandLine": "pnpm apps -- test"
 }

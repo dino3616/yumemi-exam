@@ -14,10 +14,12 @@
     "packages": "pnpm --filter './packages/**'",
     "eslint": "pnpm --filter @yumemi-exam/eslint",
     "prettier": "pnpm --filter @yumemi-exam/prettier",
+    "resas-api": "pnpm --filter @yumemi-exam/resas-api",
     "stylelint": "pnpm --filter @yumemi-exam/stylelint",
     "tsconfig": "pnpm --filter @yumemi-exam/tsconfig"
   },
   "dependencies": {
+    "aspida": "^1.11.0",
     "dotenv": "16.0.3"
   },
   "devDependencies": {

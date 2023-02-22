@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": ["yumemi-exam-node"],
+  "rules": {
+    "dot-notation": "off",
+    "import/extensions": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./"
+      }
+    }
+  }
+}

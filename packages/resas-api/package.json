@@ -1,0 +1,29 @@
+{
+  "name": "@yumemi-exam/resas-api",
+  "version": "0.1.0",
+  "repository": "https://github.com/dino3616/yumemi-exam.git",
+  "author": "dino3616 <85730998+dino3616@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "fmt": "prettier --check .",
+    "fmt:fix": "prettier --write .",
+    "test": "jest --silent=false --verbose false --passWithNoTests",
+    "generate": "aspida"
+  },
+  "dependencies": {
+    "@aspida/node-fetch": "1.11.0",
+    "dotenv": "16.0.3",
+    "node-fetch": "3.3.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "2.6.2",
+    "@yumemi-exam/jest": "workspace:*",
+    "@yumemi-exam/prettier": "workspace:*",
+    "@yumemi-exam/tsconfig": "workspace:*",
+    "eslint-config-yumemi-exam-node": "workspace:*",
+    "eslint-import-resolver-typescript": "3.5.3"
+  }
+}

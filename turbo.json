@@ -1,16 +1,25 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
-    "lint": {},
-    "fmt": {},
-    "style": {},
     "generate": {},
+    "lint": {
+      "dependsOn": ["^generate"],
+      "outputs": ["$api.*"]
+    },
+    "fmt": {
+      "dependsOn": ["^generate"],
+      "outputs": ["$api.*"]
+    },
+    "style": {
+      "dependsOn": ["^generate"],
+      "outputs": ["$api.*"]
+    },
     "build": {
-      "dependsOn": ["generate", "^build"],
-      "outputs": [".next/**", "dist/**"]
+      "dependsOn": ["^generate", "^build"],
+      "outputs": [".next/**", "$api.*", "dist/**"]
     },
     "test": {
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     }
   }
 }

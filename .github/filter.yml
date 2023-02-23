@@ -1,6 +1,6 @@
 app:
   - .github/filter.yml
-  - .github/workflows/**/*
+  - .github/workflows/app-*.yml
   - apps/**/*
   - packages/**/*
   - .npmrc

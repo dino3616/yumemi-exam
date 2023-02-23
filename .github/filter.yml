@@ -3,16 +3,28 @@ app:
   - .github/workflows/**/*
   - apps/**/*
   - packages/**/*
+  - .npmrc
+  - package.json
+  - pnpm-workspace.yaml
+  - turbo.json
 
 frontend:
   - .github/filter.yml
   - .github/workflows/frontend-*.yml
   - apps/frontend/**/*
   - packages/**/*
+  - .npmrc
+  - package.json
+  - pnpm-workspace.yaml
+  - turbo.json
 
 docker:
   - .github/filter.yml
   - .github/workflows/docker-*.yml
   - docker/**/*
   - .dockerignore
+  - .npmrc
+  - package.json
   - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - turbo.json

@@ -14,12 +14,10 @@
     "generate": "aspida"
   },
   "dependencies": {
-    "@aspida/node-fetch": "1.11.0",
-    "dotenv": "16.0.3",
-    "node-fetch": "3.3.0"
+    "@aspida/fetch": "1.11.0",
+    "dotenv": "16.0.3"
   },
   "devDependencies": {
-    "@types/node-fetch": "2.6.2",
     "@yumemi-exam/jest": "workspace:*",
     "@yumemi-exam/prettier": "workspace:*",
     "@yumemi-exam/tsconfig": "workspace:*",

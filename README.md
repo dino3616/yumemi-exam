@@ -1,4 +1,4 @@
-# Yumemi Frontend
+# Yumemi Exam
 
 Yumemi Inc. coding exam.
 

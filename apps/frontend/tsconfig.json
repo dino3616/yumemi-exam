@@ -8,6 +8,11 @@
     },
     "rootDir": "./"
   },
+  "references": [
+    {
+      "path": "../../packages/resas-api/tsconfig.build.json"
+    }
+  ],
   "include": ["./src/**/*", "./*.js", "./*.ts"],
   "exclude": ["node_modules"]
 }

@@ -5,20 +5,20 @@
       "outputs": ["$api.*"]
     },
     "lint": {
-      "dependsOn": ["^generate"]
+      "dependsOn": ["^generate", "generate"]
     },
     "fmt": {
-      "dependsOn": ["^generate"]
+      "dependsOn": ["^generate", "generate"]
     },
     "style": {
-      "dependsOn": ["^generate"]
+      "dependsOn": ["^generate", "generate"]
     },
     "build": {
-      "dependsOn": ["^generate", "^build"],
+      "dependsOn": ["^generate", "generate", "^build"],
       "outputs": [".next/**", "dist/**"]
     },
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build", "build"]
     }
   }
 }

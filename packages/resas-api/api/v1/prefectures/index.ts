@@ -1,10 +1,8 @@
 import type { DefineMethods } from 'aspida';
+import type { Prefecture } from '../../../model/prefecture.model';
 
 export type Response = {
-  result: {
-    prefCode: number;
-    prefName: string;
-  };
+  result: Prefecture[];
 };
 
 export type Methods = DefineMethods<{

@@ -1,19 +1,16 @@
 import type { DefineMethods } from 'aspida';
+import type { PopulationComposition } from '../../../../../model/population-composition.model';
 
 export type Query = {
   prefCode: number;
   cityCode: number | '-';
-  addArea: string;
+  addArea?: string;
 };
 
 export type Response = {
-  boundaryYear: number;
-  data: {
-    label: string;
-    data: {
-      year: number;
-      value: number;
-    }[];
+  result: {
+    boundaryYear: number;
+    data: PopulationComposition[];
   };
 };
 

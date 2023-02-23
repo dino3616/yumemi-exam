@@ -31,8 +31,8 @@ jobs:
     needs: filter
     if: needs.filter.outputs.app == 'true'
     env:
-      RESAS_API_URL: ${{ env.RESAS_API_URL }}
-      RESAS_API_KEY: ${{ env.RESAS_API_KEY }}
+      RESAS_API_URL: ${{ secrets.RESAS_API_URL }}
+      RESAS_API_KEY: ${{ secrets.RESAS_API_KEY }}
     steps:
       - name: checkout
         uses: actions/checkout@v3

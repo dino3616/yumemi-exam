@@ -1,12 +1,18 @@
+app:
+  - .github/filter.yml
+  - .github/workflows/**/*
+  - apps/**/*
+  - packages/**/*
+
 frontend:
   - .github/filter.yml
   - .github/workflows/frontend-*.yml
-  - apps/frontend/**
-  - packages/**
+  - apps/frontend/**/*
+  - packages/**/*
 
 docker:
   - .github/filter.yml
   - .github/workflows/docker-*.yml
-  - docker/**
+  - docker/**/*
   - .dockerignore
   - pnpm-lock.yaml

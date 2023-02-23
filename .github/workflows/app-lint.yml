@@ -1,9 +1,11 @@
-name: frontend lint
+name: app lint
 
 on: push
 
 env:
   node-version: 18
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
 jobs:
   filter:
@@ -12,7 +14,7 @@ jobs:
       contents: read
       pull-requests: read
     outputs:
-      frontend: ${{ steps.changes.outputs.frontend }}
+      app: ${{ steps.changes.outputs.app }}
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -27,7 +29,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     needs: filter
-    if: ${{ needs.filter.outputs.frontend == 'true' }}
+    if: ${{ needs.filter.outputs.app == 'true' }}
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -59,15 +61,15 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: eslint
-        run: pnpm frontend lint --max-warnings=0
+        run: pnpm turbo lint -- --max-warnings=0
 
       - name: prettier
-        run: pnpm frontend fmt
+        run: pnpm turbo fmt
 
       - name: stylelint
-        run: pnpm frontend style --max-warnings=0
+        run: pnpm turbo style -- --max-warnings=0
 
-  frontend-lint-check:
+  app-lint-check:
     runs-on: ubuntu-latest
     needs: lint
     if: ${{ ! failure() }}

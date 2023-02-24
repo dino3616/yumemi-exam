@@ -74,7 +74,7 @@ importers:
       date-fns: 2.29.3
       date-fns-tz: 2.0.0
       eslint-config-yumemi-exam-nextjs: workspace:*
-      framer-motion: 9.1.7
+      framer-motion: 10.0.0
       next: 13.2.1
       next-remove-imports: 1.0.10
       postcss: 8.4.21
@@ -99,7 +99,7 @@ importers:
       '@yumemi-exam/resas-api': link:../../packages/resas-api
       date-fns: 2.29.3
       date-fns-tz: 2.0.0_date-fns@2.29.3
-      framer-motion: 9.1.7_biqbaboplfbrettd7655fr4n2y
+      framer-motion: 10.0.0_biqbaboplfbrettd7655fr4n2y
       next: 13.2.1_4pgn6omj4irpgog4tpnzary34q
       next-remove-imports: 1.0.10_webpack@5.75.0
       react: 18.2.0
@@ -8621,8 +8621,8 @@ packages:
       map-cache: 0.2.2
     dev: true
 
-  /framer-motion/9.1.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-nKxBkIO4IPkMEqcBbbATxsVjwPYShKl051yhBv9628iAH6JLeHD0siBHxkL62oQzMC1+GNX73XtPjgP753ufuw==}
+  /framer-motion/10.0.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-qVmndcu4Z3q5ftqcbUCvVewHc5yiw4uIZyM0uvJ0/spj9lza/FnWywUUc8DNIZTG1my6nFsNLRPGDruP4o6eIw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0

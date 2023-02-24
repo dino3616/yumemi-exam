@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "generate": {
-      "outputs": ["$api.*"]
+      "outputs": ["api/**/$api.*"]
     },
     "lint": {
       "dependsOn": ["^generate", "generate"]

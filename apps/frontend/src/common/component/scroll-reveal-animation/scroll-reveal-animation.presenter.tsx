@@ -8,7 +8,14 @@ export type ScrollRevealAnimationProps = ComponentPropsWithoutRef<typeof motion.
   distance?: string;
 };
 
-export const ScrollRevealAnimation: FC<ScrollRevealAnimationProps> = ({ once, duration, delay, distance, children, ...props }) => (
+export const ScrollRevealAnimation: FC<ScrollRevealAnimationProps> = ({
+  once = true,
+  duration = 0.8,
+  delay = 0,
+  distance = '40px',
+  children,
+  ...props
+}) => (
   <motion.div
     data-chromatic="ignore"
     variants={{

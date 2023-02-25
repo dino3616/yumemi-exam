@@ -10,10 +10,7 @@ const Root: FC<RootProps> = ({ children, className, ...props }) => (
     {...props}
     aria-label={props['aria-label']}
     style={{ WebkitTapHighlightColor: 'transparent', cursor: 'pointer' }}
-    className={twMerge(
-      'flex h-6 w-6 items-center justify-center rounded-lg bg-white shadow-inner transition-all focus:bg-accent-200/70 hover:bg-accent-200/70',
-      className,
-    )}
+    className={twMerge('flex h-6 w-6 items-center justify-center rounded-lg bg-white shadow-inner transition-all hover:bg-accent-200/80', className)}
   >
     {children}
   </RadixUiCheckbox.Root>

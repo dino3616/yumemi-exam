@@ -13,6 +13,6 @@
     },
     "rootDir": "./"
   },
-  "include": ["./**/*"],
-  "exclude": ["node_modules", "./**/*.js"]
+  "include": ["**/*"],
+  "exclude": ["**/node_modules/**/*", "./**/*.js"]
 }

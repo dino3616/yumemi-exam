@@ -11,5 +11,7 @@ export const getPrefecturePopulationCompositions: GetPrefecturePopulationComposi
     }),
   );
 
+  prefecturePopulationCompositions.sort((a, b) => a.prefecture.prefCode - b.prefecture.prefCode);
+
   return prefecturePopulationCompositions;
 };

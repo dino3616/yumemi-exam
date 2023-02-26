@@ -11,8 +11,8 @@ type Story = ComponentStoryObj<typeof Root>;
 const meta: ComponentMeta<typeof Root> = {
   component: Root,
   argTypes: {
-    prefecturePopulationCompositions: {
-      description: 'Population compositions by prefecture.',
+    prefectureTotalPopulationCompositions: {
+      description: 'Total population compositions by prefecture.',
       control: { type: 'object' },
     },
   },
@@ -22,7 +22,7 @@ export default meta;
 
 export const Default: Story = {
   args: {
-    prefecturePopulationCompositions: [
+    prefectureTotalPopulationCompositions: [
       mockedPrefecturePopulationComposition1,
       mockedPrefecturePopulationComposition2,
       mockedPrefecturePopulationComposition3,

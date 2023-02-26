@@ -19,6 +19,8 @@ docker compose -f "./docker/docker-compose.development.yml" -p "yumemi-exam" up 
 ### set env variables
 
 - `CHROMATIC_PROJECT_TOKEN`
+- `RESAS_API_URL`
+- `RESAS_API_KEY`
 
 # Component Catalog
 

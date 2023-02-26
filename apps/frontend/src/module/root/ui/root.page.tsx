@@ -1,38 +1,46 @@
-import { motion } from 'framer-motion';
-import type { ComponentPropsWithoutRef, FC } from 'react';
-import { BsCheck } from 'react-icons/bs';
-import { Checkbox } from '@/common/component/checkbox/checkbox.presenter';
+import { ComponentPropsWithoutRef, FC, useState } from 'react';
+import { Card } from '@/common/component/card/card.presenter';
 import type { PrefecturePopulationComposition } from '@/module/root/model/prefecture-population-composition.model';
+import type { Prefecture } from '@/module/root/model/prefecture.model';
+import { PrefectureCheckboxList } from '@/module/root/ui/component/prefecture-checkbox-list/prefecture-checkbox-list.presenter';
+import { PrefecturePopulationCompositionGraph } from '@/module/root/ui/component/prefecture-population-composition-graph/prefecture-population-composition-graph.presenter';
 
-export type RootProps = ComponentPropsWithoutRef<'div'> & {
-  prefecturePopulationCompositions: PrefecturePopulationComposition[];
+export type RootProps = Omit<ComponentPropsWithoutRef<'div'>, 'children'> & {
+  prefectureTotalPopulationCompositions: PrefecturePopulationComposition[];
 };
 
-export const Root: FC<RootProps> = ({ prefecturePopulationCompositions, ...props }) => {
+export const Root: FC<RootProps> = ({ prefectureTotalPopulationCompositions, ...props }) => {
+  const prefectures = prefectureTotalPopulationCompositions.map(
+    (prefectureTotalPopulationComposition) => prefectureTotalPopulationComposition.prefecture,
+  );
+  const [prefecturesSelection, setPrefecturesSelection] = useState<{ prefecture: Prefecture; isChecked: boolean }[]>(
+    prefectures.map((prefecture) => ({ prefecture, isChecked: false })),
+  );
+
   return (
-    <div {...props}>
-      {prefecturePopulationCompositions.map((prefecturePopulationComposition) => (
-        <div key={prefecturePopulationComposition.prefecture.prefCode.toString()} className="flex items-center gap-3">
-          <Checkbox.Root
-            aria-label={`${prefecturePopulationComposition.prefecture.prefName} checkbox`}
-            id={prefecturePopulationComposition.prefecture.prefCode.toString()}
-          >
-            <Checkbox.Indicator>
-              <motion.figure
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
-                transition={{ duration: 0.2, ease: 'easeIn' }}
-              >
-                <BsCheck size={20} />
-              </motion.figure>
-            </Checkbox.Indicator>
-          </Checkbox.Root>
-          <label htmlFor={prefecturePopulationComposition.prefecture.prefCode.toString()} className="text-lg">
-            {prefecturePopulationComposition.prefecture.prefName}
-          </label>
-        </div>
-      ))}
+    <div className="flex flex-col items-center space-y-12" {...props}>
+      <PrefectureCheckboxList
+        prefectures={prefectureTotalPopulationCompositions.map(
+          (prefectureTotalPopulationComposition) => prefectureTotalPopulationComposition.prefecture,
+        )}
+        onCheckedChange={(prefecture, isChecked) => {
+          setPrefecturesSelection(
+            prefecturesSelection.map((prefectureSelection) =>
+              prefectureSelection.prefecture.prefCode === prefecture.prefCode ? { prefecture, isChecked } : prefectureSelection,
+            ),
+          );
+        }}
+      />
+      <Card className="w-11/12 rounded-3xl drop-shadow-xl">
+        <PrefecturePopulationCompositionGraph
+          prefecturePopulationCompositions={prefectureTotalPopulationCompositions.filter((prefectureTotalPopulationComposition) =>
+            prefecturesSelection.some(
+              (prefectureSelection) =>
+                prefectureSelection.prefecture.prefCode === prefectureTotalPopulationComposition.prefecture.prefCode && prefectureSelection.isChecked,
+            ),
+          )}
+        />
+      </Card>
     </div>
   );
 };

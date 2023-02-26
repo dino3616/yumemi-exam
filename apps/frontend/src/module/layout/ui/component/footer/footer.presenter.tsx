@@ -1,6 +1,7 @@
 import type { ComponentPropsWithoutRef, FC } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Avatar } from '@/common/component/avatar/avatar.presenter';
+import { Link } from '@/common/component/link/link.presenter';
 
 export type FooterProps = Omit<ComponentPropsWithoutRef<'footer'>, 'children'>;
 
@@ -14,6 +15,14 @@ export const Footer: FC<FooterProps> = ({ className, ...props }) => (
       </span>
       <Avatar size={120} />
     </div>
-    <small className="text-sm font-semibold">Copyright &copy; shio all right reserved.</small>
+    <div className="flex flex-col items-center">
+      <small className="text-sm font-semibold">Copyright &copy; shio all right reserved.</small>
+      <small className="text-sm font-semibold">
+        Source:&nbsp;
+        <Link href="https://resas.go.jp" target="_blank" className="underline">
+          RESAS (Regional Economy Society Analyzing System)
+        </Link>
+      </small>
+    </div>
   </footer>
 );

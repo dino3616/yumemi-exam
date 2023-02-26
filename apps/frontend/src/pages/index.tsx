@@ -4,20 +4,20 @@ import type { PrefecturePopulationComposition } from '@/module/root/model/prefec
 import { getPopulationComposition } from '@/module/root/repository/impl/get-population-composition.repository';
 import { getPrefectures } from '@/module/root/repository/impl/get-prefectures.repository';
 import { Root } from '@/module/root/ui/root.page';
-import { getPrefecturePopulationCompositions } from '@/module/root/use-case/impl/get-prefecture-population-compositions.use-case';
+import { getPrefectureTotalPopulationCompositions } from '@/module/root/use-case/impl/get-prefecture-total-population-compositions.use-case';
 
 type RootPageProps = {
-  prefecturePopulationCompositions: PrefecturePopulationComposition[];
+  prefectureTotalPopulationCompositions: PrefecturePopulationComposition[];
 };
 
-const RootPage: NextPage<RootPageProps> = ({ prefecturePopulationCompositions }: RootPageProps) => (
+const RootPage: NextPage<RootPageProps> = ({ prefectureTotalPopulationCompositions }: RootPageProps) => (
   <Layout title="Yumemi Inc. coding exam @ shio" className="py-10 px-5 md:px-10">
-    <Root prefecturePopulationCompositions={prefecturePopulationCompositions} />
+    <Root prefectureTotalPopulationCompositions={prefectureTotalPopulationCompositions} />
   </Layout>
 );
 
 export const getStaticProps: GetStaticProps<RootPageProps> = async () => {
-  const prefecturePopulationCompositions = await getPrefecturePopulationCompositions({
+  const prefectureTotalPopulationCompositions = await getPrefectureTotalPopulationCompositions({
     inject: {
       getPopulationComposition,
       getPrefectures,
@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps<RootPageProps> = async () => {
 
   return {
     props: {
-      prefecturePopulationCompositions: JSON.parse(JSON.stringify(prefecturePopulationCompositions)),
+      prefectureTotalPopulationCompositions: JSON.parse(JSON.stringify(prefectureTotalPopulationCompositions)),
     },
     revalidate: 60 * 60 * 24,
   };

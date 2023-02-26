@@ -4,5 +4,5 @@ import type { Prefecture } from '@/module/root/model/prefecture.model';
 export type PrefecturePopulationComposition = {
   prefecture: Prefecture;
   boundaryYear: number;
-  populationCompositions: PopulationComposition[];
+  populationComposition: PopulationComposition;
 };

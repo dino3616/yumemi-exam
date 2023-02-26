@@ -6,25 +6,23 @@ export const mockedPrefecturePopulationComposition1: PrefecturePopulationComposi
     prefName: '北海道',
   },
   boundaryYear: 2015,
-  populationCompositions: [
-    {
-      label: '総人口',
-      data: [
-        {
-          year: 2010,
-          value: 100,
-        },
-        {
-          year: 2015,
-          value: 200,
-        },
-        {
-          year: 2020,
-          value: 300,
-        },
-      ],
-    },
-  ],
+  populationComposition: {
+    label: '総人口',
+    data: [
+      {
+        year: 2010,
+        value: 100,
+      },
+      {
+        year: 2015,
+        value: 200,
+      },
+      {
+        year: 2020,
+        value: 300,
+      },
+    ],
+  },
 };
 
 export const mockedPrefecturePopulationComposition2: PrefecturePopulationComposition = {
@@ -33,25 +31,23 @@ export const mockedPrefecturePopulationComposition2: PrefecturePopulationComposi
     prefName: '青森県',
   },
   boundaryYear: 2015,
-  populationCompositions: [
-    {
-      label: '総人口',
-      data: [
-        {
-          year: 2010,
-          value: 100,
-        },
-        {
-          year: 2015,
-          value: 200,
-        },
-        {
-          year: 2020,
-          value: 300,
-        },
-      ],
-    },
-  ],
+  populationComposition: {
+    label: '総人口',
+    data: [
+      {
+        year: 2010,
+        value: 100,
+      },
+      {
+        year: 2015,
+        value: 200,
+      },
+      {
+        year: 2020,
+        value: 300,
+      },
+    ],
+  },
 };
 
 export const mockedPrefecturePopulationComposition3: PrefecturePopulationComposition = {
@@ -60,23 +56,21 @@ export const mockedPrefecturePopulationComposition3: PrefecturePopulationComposi
     prefName: '岩手県',
   },
   boundaryYear: 2015,
-  populationCompositions: [
-    {
-      label: '総人口',
-      data: [
-        {
-          year: 2010,
-          value: 100,
-        },
-        {
-          year: 2015,
-          value: 200,
-        },
-        {
-          year: 2020,
-          value: 300,
-        },
-      ],
-    },
-  ],
+  populationComposition: {
+    label: '総人口',
+    data: [
+      {
+        year: 2010,
+        value: 100,
+      },
+      {
+        year: 2015,
+        value: 200,
+      },
+      {
+        year: 2020,
+        value: 300,
+      },
+    ],
+  },
 };

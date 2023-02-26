@@ -5,9 +5,9 @@ import {
 import type {
   GetPrefecturePopulationCompositionsInterface,
   GetPrefecturePopulationCompositionsOutput,
-} from '@/module/root/use-case/get-prefecture-population-compositions.use-case';
+} from '@/module/root/use-case/get-prefecture-total-population-compositions.use-case';
 
-export const getPrefecturePopulationCompositions: GetPrefecturePopulationCompositionsInterface = async () => {
+export const mockedGetPrefecturePopulationCompositions1: GetPrefecturePopulationCompositionsInterface = async () => {
   const output: GetPrefecturePopulationCompositionsOutput = [mockedPrefecturePopulationComposition1, mockedPrefecturePopulationComposition2];
 
   return output;

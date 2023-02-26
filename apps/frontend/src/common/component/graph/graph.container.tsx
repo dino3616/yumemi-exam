@@ -7,7 +7,7 @@ export { GraphType };
 
 export type Options = ComponentPropsWithRef<typeof GraphPresenter>['options'];
 
-export type GraphProps = Omit<ComponentPropsWithoutRef<'div'>, 'children'> & {
+export type GraphProps = Omit<ComponentPropsWithoutRef<'figure'>, 'children'> & {
   options: Options;
 };
 
@@ -50,8 +50,8 @@ export const Graph: FC<GraphProps> = ({ options, ...props }) => {
   );
 
   return (
-    <div {...props}>
+    <figure {...props}>
       <GraphPresenter ref={ref} options={{ ...defaultOptions, ...options }} />
-    </div>
+    </figure>
   );
 };

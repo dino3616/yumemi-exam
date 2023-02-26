@@ -18,19 +18,21 @@ export const Default: Story = {
     const ref = useRef<HighchartsReact.RefObject>(null);
 
     return (
-      <Graph
-        {...args}
-        ref={ref}
-        options={{
-          ...args.options,
-          series: [
-            {
-              type: 'line',
-              data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-            },
-          ],
-        }}
-      />
+      <figure data-chromatic="ignore">
+        <Graph
+          {...args}
+          ref={ref}
+          options={{
+            ...args.options,
+            series: [
+              {
+                type: 'line',
+                data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+              },
+            ],
+          }}
+        />
+      </figure>
     );
   },
 };

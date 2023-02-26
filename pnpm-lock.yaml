@@ -75,6 +75,7 @@ importers:
       css-loader: 6.7.3
       date-fns: 2.29.3
       date-fns-tz: 2.0.0
+      dotenv: 16.0.3
       eslint-config-yumemi-exam-nextjs: workspace:*
       framer-motion: 10.0.0
       highcharts: 10.3.3
@@ -105,6 +106,7 @@ importers:
       '@yumemi-exam/resas-api': link:../../packages/resas-api
       date-fns: 2.29.3
       date-fns-tz: 2.0.0_date-fns@2.29.3
+      dotenv: 16.0.3
       framer-motion: 10.0.0_biqbaboplfbrettd7655fr4n2y
       highcharts: 10.3.3
       highcharts-react-official: 3.1.0_kwza2hs7i6v4p3ij2mdqdwgj4q

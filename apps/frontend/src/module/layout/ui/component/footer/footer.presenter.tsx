@@ -20,7 +20,7 @@ export const Footer: FC<FooterProps> = ({ className, ...props }) => (
       <small className="text-sm font-semibold">
         Source:&nbsp;
         <Link href="https://resas.go.jp" target="_blank" className="underline">
-          RESAS (Regional Economy Society Analyzing System)
+          RESAS
         </Link>
       </small>
     </div>

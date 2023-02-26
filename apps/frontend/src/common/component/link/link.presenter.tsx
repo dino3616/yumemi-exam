@@ -1,10 +1,12 @@
 import NextLink from 'next/link';
-import type { ComponentPropsWithoutRef, FC } from 'react';
+import { ComponentPropsWithoutRef, forwardRef, ForwardRefExoticComponent } from 'react';
 
 export type LinkProps = ComponentPropsWithoutRef<typeof NextLink>;
 
-export const Link: FC<LinkProps> = ({ children, ...props }) => (
-  <NextLink scroll={false} {...props}>
+export const Link: ForwardRefExoticComponent<LinkProps> = forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, ref) => (
+  <NextLink ref={ref} scroll={false} {...props}>
     {children}
   </NextLink>
-);
+));
+
+Link.displayName = 'Link';

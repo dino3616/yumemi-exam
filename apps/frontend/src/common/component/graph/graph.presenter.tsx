@@ -7,7 +7,7 @@ export type GraphProps = ComponentPropsWithoutRef<typeof HighchartsReact> & {
 };
 
 export const Graph: ForwardRefExoticComponent<GraphProps> = forwardRef<HighchartsReact.RefObject, GraphProps>(({ ...props }, ref) => (
-  <HighchartsReact data-chromatic="ignore" ref={ref} highcharts={Highcharts} {...props} />
+  <HighchartsReact ref={ref} highcharts={Highcharts} {...props} />
 ));
 
 Graph.displayName = 'Graph';

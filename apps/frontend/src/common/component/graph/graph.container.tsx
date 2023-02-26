@@ -50,7 +50,7 @@ export const Graph: FC<GraphProps> = ({ options, ...props }) => {
   );
 
   return (
-    <figure {...props}>
+    <figure data-chromatic="ignore" {...props}>
       <GraphPresenter ref={ref} options={{ ...defaultOptions, ...options }} />
     </figure>
   );

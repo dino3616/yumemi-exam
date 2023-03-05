@@ -77,7 +77,7 @@ importers:
       date-fns-tz: 2.0.0
       dotenv: 16.0.3
       eslint-config-yumemi-exam-nextjs: workspace:*
-      framer-motion: 10.0.1
+      framer-motion: 10.0.2
       highcharts: 10.3.3
       highcharts-react-official: 3.2.0
       next: 13.2.3
@@ -107,7 +107,7 @@ importers:
       date-fns: 2.29.3
       date-fns-tz: 2.0.0_date-fns@2.29.3
       dotenv: 16.0.3
-      framer-motion: 10.0.1_biqbaboplfbrettd7655fr4n2y
+      framer-motion: 10.0.2_biqbaboplfbrettd7655fr4n2y
       highcharts: 10.3.3
       highcharts-react-official: 3.2.0_kwza2hs7i6v4p3ij2mdqdwgj4q
       next: 13.2.3_4pgn6omj4irpgog4tpnzary34q
@@ -8926,8 +8926,8 @@ packages:
       map-cache: 0.2.2
     dev: true
 
-  /framer-motion/10.0.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-/N7gBA9gH8PkStyNQ67P/lx8UhL/7Y8z9Ku7FfgOF77sSG8wu8781kX7I5ZUgflRRtQXo8qH4Rev23004G1zcQ==}
+  /framer-motion/10.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-1k8y1e6DMRQ/r6or4TBxRhE1cXlDE5bm+SFeWLeh7ng0sfSbpROC2Qd1OEHq6lLXNARar/KKoj/EQ6eIvn60Uw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0

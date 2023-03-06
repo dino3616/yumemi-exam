@@ -15,6 +15,6 @@
   "devDependencies": {
     "@yumemi-exam/prettier": "workspace:*",
     "eslint-config-yumemi-exam-base": "workspace:*",
-    "jest-environment-jsdom": "29.4.3"
+    "jest-environment-jsdom": "29.5.0"
   }
 }
